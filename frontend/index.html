@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OpenChat Study</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <div class="brand"><span class="brand-mark">✦</span><div><strong>OpenChat</strong><small>cliente de estudo</small></div></div>
+      <button id="new-session" class="ghost-button" type="button">＋ Nova conversa</button>
+    </header>
+
+    <section class="hero">
+      <p class="eyebrow">OPENROUTER · CHAT</p>
+      <h1>Converse com um modelo<br><em>sem perder o contexto.</em></h1>
+      <p class="subtitle">Uma interface simples para testar modelos gratuitos e observar como o histórico é controlado.</p>
+    </section>
+
+    <section class="settings-card">
+      <div class="field"><label for="model">Modelo ativo</label><select id="model"></select></div>
+      <div class="policy"><span class="status-dot"></span><div><b>Política de contexto</b><span>Resumo do histórico antigo · até 12 mensagens recentes</span></div></div>
+    </section>
+
+    <section id="conversation" class="conversation" aria-live="polite">
+      <div id="empty-state" class="empty-state"><div class="empty-icon">✦</div><h2>Comece uma conversa</h2><p>Envie uma mensagem para receber uma resposta do modelo selecionado.</p></div>
+    </section>
+
+    <div id="status" class="status" role="status"></div>
+    <form id="chat-form" class="composer">
+      <textarea id="message" rows="1" placeholder="Escreva sua mensagem..." aria-label="Mensagem"></textarea>
+      <button id="send" class="send-button" type="submit" aria-label="Enviar mensagem"><span>Enviar</span><b>↗</b></button>
+    </form>
+    <p class="privacy-note">A chave e as mensagens não são persistidas pelo cliente. Se necessário, o histórico antigo é resumido antes do envio.</p>
+  </main>
+  <script src="/static/app.js"></script>
+</body>
+</html>
